@@ -505,7 +505,7 @@
           },
           "subnetIds": {
             "value": [
-              "[concat(reference('virtualNetworkDeployment').outputs.vnetId.value,'/subnets/',variables('addcSubnetName'))]",
+              "[concat(reference('virtualNetworkDeployment').outputs.vnetId.value,'/subnets/',variables('adfsSubnetName'))]",
               "[concat(reference('virtualNetworkDeployment').outputs.vnetId.value,'/subnets/',variables('dmzSubnetName'))]"
             ]
           },
