@@ -7,7 +7,7 @@
       "metadata": {
         "description": "The name of the Virtual Network to Create, mandatory on both existing or new virtual network usage. location and -001 will be added on."
       },
-      "defaultValue": "vnet-dev-identity"
+      "defaultValue": "usmc-mcu-identity-vnet"
     },
     "virtualNetworkAddressRange": {
       "type": "string",
