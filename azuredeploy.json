@@ -63,7 +63,7 @@
       "metadata": {
         "description": "The name of the internal subnet, mandatory on both virtual network usage options (new or existing). location and -001 will be added on."
       },
-      "defaultValue": "snet-adcnnect-dev"
+      "defaultValue": "snet-adconnect-dev"
     },
     "adconnectSubnetAddressRange": {
       "type": "string",
@@ -127,6 +127,13 @@
         "description": "The internal IP address of the second ADFS server, this IP address will be statically assigned to the ADFS server and must be a valid ip address within the Internal subnet."
       },
       "defaultValue": "10.1.2.102"
+    },
+    "adcs03NicIPAddress": {
+      "type": "string",
+      "metadata": {
+        "description": "The internal IP address of the second ADFS server, this IP address will be statically assigned to the ADFS server and must be a valid ip address within the Internal subnet."
+      },
+      "defaultValue": "10.1.2.103"
     },
     "adconnect01NicIPAddress": {
       "type": "string",
@@ -582,6 +589,7 @@
               "[parameters('adfs02NicIPAddress')]",
               "[parameters('adcs01NicIPAddress')]",
               "[parameters('adcs02NicIPAddress')]",
+              "[parameters('adcs03NicIPAddress')]",
               "[parameters('adconnect01NicIPAddress')]",
               "[parameters('wap01NicIPAddress')]",
               "[parameters('wap02NicIPAddress')]"
@@ -595,6 +603,7 @@
               "[concat('nic-',parameters('adfsVmNamePrefix'),'-002')]",
               "[concat('nic-',parameters('adcsVmNamePrefix'),'-001')]",
               "[concat('nic-',parameters('adcsVmNamePrefix'),'-002')]",
+              "[concat('nic-',parameters('adcsVmNamePrefix'),'-003')]",
               "[concat('nic-',parameters('adconnectVmNamePrefix'),'-001')]",
               "[concat('nic-',parameters('wapVmNamePrefix'),'-001')]",
               "[concat('nic-',parameters('wapVmNamePrefix'),'-002')]"
