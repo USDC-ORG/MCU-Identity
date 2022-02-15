@@ -195,7 +195,7 @@
       "metadata": {
         "description": "Virtual Machine name prefix for Domain Controllers"
       },
-      "defaultValue": "vm-dc"
+      "defaultValue": "vm-addc"
     },
     "adfsVmNamePrefix": {
       "type": "string",
@@ -219,7 +219,7 @@
       "metadata": {
         "description": "Virtual Machine name prefix for AD Connect server"
       },
-      "defaultValue": "vm-adc"
+      "defaultValue": "vm-aadc"
     },
     "wapVmNamePrefix": {
       "maxLength": "11",
@@ -416,9 +416,10 @@
     "deployPublicIPsUrl": "[concat(variables('baseUrl'),'/deployPublicIPs.json')]",
     "deployVnetURL": "[concat(variables('baseUrl'),'/deployVnet','.json')]",
     "deployLoadBalancersUrl": "[concat(variables('baseUrl'),'/deployLoadBalancers.json')]",
-    //public IP settings
+    //public IP configurations
     "publicIPAddressType": "Static",
     "publicIpSku": "standard",
+    //LB configurations
     "lbfe": "lbFrontEnd",
     "lbbe": "lbBackEnd",
     "lbPublicIpResourceIds": [
@@ -761,10 +762,10 @@
             "value": "[parameters('adcsVmNamePrefix')]"
           },
           "vmSize": {
-            "value": "[parameters('adfsVMsSize')]"
+            "value": "[parameters('adcsVMsSize')]"
           },
           "vmCount": {
-            "value": 2
+            "value": 3
           },
           "storageAccountNamePrefix": {
             "value": "[variables('storageAccountNamePrefix')]"
