@@ -541,10 +541,10 @@
             "value": "[parameters('adfsLoadBalancerPrivateIpAddress')]"
           },
           "adcsLoadBalancerPrivateIpAddress": {
-            "value": "[parameters('adfsLoadBalancerPrivateIpAddress')]"
+            "value": "[parameters('adcsLoadBalancerPrivateIpAddress')]"
           },
           "wapLoadBalancerPrivateIpAddress": {
-            "value": "[parameters('adfsLoadBalancerPrivateIpAddress')]"
+            "value": "[parameters('wapLoadBalancerPrivateIpAddress')]"
           }
         }
       }
