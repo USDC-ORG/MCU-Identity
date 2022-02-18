@@ -17,6 +17,9 @@
     "adfsBeAddressPoolID": {
       "type": "string"
     },
+    "adcsBeAddressPoolID": {
+      "type": "string"
+    },
     "wapBeAddressPoolID": {
       "type": "string"
     }
@@ -131,7 +134,12 @@
               "privateIPAddress": "[parameters('ipAddresses')[4]]",
               "subnet": {
                 "id": "[parameters('subnetIds')[2]]"
-              }
+              },
+              "loadBalancerBackendAddressPools": [
+                {
+                  "id": "[parameters('adcsBEAddressPoolID')]"
+                }
+              ]
             }
           }
         ]
@@ -152,7 +160,12 @@
               "privateIPAddress": "[parameters('ipAddresses')[5]]",
               "subnet": {
                 "id": "[parameters('subnetIds')[2]]"
-              }
+              },
+              "loadBalancerBackendAddressPools": [
+                {
+                  "id": "[parameters('adcsBEAddressPoolID')]"
+                }
+              ]
             }
           }
         ]
@@ -173,7 +186,12 @@
               "privateIPAddress": "[parameters('ipAddresses')[6]]",
               "subnet": {
                 "id": "[parameters('subnetIds')[2]]"
-              }
+              },
+              "loadBalancerBackendAddressPools": [
+                {
+                  "id": "[parameters('adcsBEAddressPoolID')]"
+                }
+              ]
             }
           }
         ]
