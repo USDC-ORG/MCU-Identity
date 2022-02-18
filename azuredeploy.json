@@ -91,77 +91,77 @@
       "metadata": {
         "description": "The internal IP address of the first Domain Controller, this IP address will be statically assigned to the DC and must be a valid ip address within the Internal subnet."
       },
-      "defaultValue": "10.1.0.1"
+      "defaultValue": "10.1.0.4"
     },
     "addc02NicIPAddress": {
       "type": "string",
       "metadata": {
         "description": "The internal IP address of the second Domain Controller, this IP address will be statically assigned to the DC and must be a valid ip address within the Internal subnet."
       },
-      "defaultValue": "10.1.0.2"
+      "defaultValue": "10.1.0.5"
     },
     "adfs01NicIPAddress": {
       "type": "string",
       "metadata": {
         "description": "The internal IP address of the first ADFS server, this IP address will be statically assigned to the ADFS server and must be a valid ip address within the Internal subnet."
       },
-      "defaultValue": "10.1.0.32"
+      "defaultValue": "10.1.0.35"
     },
     "adfs02NicIPAddress": {
       "type": "string",
       "metadata": {
         "description": "The internal IP address of the second ADFS server, this IP address will be statically assigned to the ADFS server and must be a valid ip address within the Internal subnet."
       },
-      "defaultValue": "10.1.0.33"
+      "defaultValue": "10.1.0.36"
     },
     "adcs01NicIPAddress": {
       "type": "string",
       "metadata": {
         "description": "The internal IP address of the first ADFS server, this IP address will be statically assigned to the ADFS server and must be a valid ip address within the Internal subnet."
       },
-      "defaultValue": "10.1.0.64"
+      "defaultValue": "10.1.0.67"
     },
     "adcs02NicIPAddress": {
       "type": "string",
       "metadata": {
         "description": "The internal IP address of the second ADFS server, this IP address will be statically assigned to the ADFS server and must be a valid ip address within the Internal subnet."
       },
-      "defaultValue": "10.1.0.65"
+      "defaultValue": "10.1.0.68"
     },
     "adcs03NicIPAddress": {
       "type": "string",
       "metadata": {
         "description": "The internal IP address of the second ADFS server, this IP address will be statically assigned to the ADFS server and must be a valid ip address within the Internal subnet."
       },
-      "defaultValue": "10.1.0.66"
+      "defaultValue": "10.1.0.69"
     },
     "adconnect01NicIPAddress": {
       "type": "string",
       "metadata": {
         "description": "The internal IP address of the first ADFS server, this IP address will be statically assigned to the ADFS server and must be a valid ip address within the Internal subnet."
       },
-      "defaultValue": "10.1.0.96"
+      "defaultValue": "10.1.0.99"
     },
     "wap01NicIPAddress": {
       "type": "string",
       "metadata": {
         "description": "The internal IP address of the first WAP server, this IP address will be statically assigned to the WAP server and must be a valid ip address within the DMZ subnet."
       },
-      "defaultValue": "10.1.0.128"
+      "defaultValue": "10.1.0.131"
     },
     "wap02NicIPAddress": {
       "type": "string",
       "metadata": {
         "description": "The internal IP address of the second WAP server, this IP address will be statically assigned to the WAP server and must be a valid ip address within the DMZ subnet."
       },
-      "defaultValue": "10.1.0.129"
+      "defaultValue": "10.1.0.132"
     },
     "adfsLoadBalancerPrivateIpAddress": {
       "type": "string",
       "metadata": {
         "description": "The internal IP address of the ADFS load balancer, this IP address will be statically assigned to the load balancer and must be a valid ip address within the Internal subnet."
       },
-      "defaultValue": "10.1.0.34"
+      "defaultValue": "10.1.0.38"
     },
     "adfsLoadBalancer": {
       "type": "string",
@@ -175,7 +175,7 @@
       "metadata": {
         "description": "The internal IP address of the ADFS load balancer, this IP address will be statically assigned to the load balancer and must be a valid ip address within the Internal subnet."
       },
-      "defaultValue": "10.1.0.67"
+      "defaultValue": "10.1.0.70"
     },
     "adcsLoadBalancer": {
       "type": "string",
@@ -189,7 +189,7 @@
       "metadata": {
         "description": "The internal IP address of the ADFS load balancer, this IP address will be statically assigned to the load balancer and must be a valid ip address within the Internal subnet."
       },
-      "defaultValue": "10.1.0.130"
+      "defaultValue": "10.1.0.133"
     },
     "wapLoadBalancer": {
       "type": "string",
