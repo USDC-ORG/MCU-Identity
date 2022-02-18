@@ -56,7 +56,7 @@
       "metadata": {
         "description": "The address range of the dmz subnet, which contains the Windows application proxy servers, mandatory if creating a new virtual network."
       },
-      "defaultValue": "10.1.0.64/24"
+      "defaultValue": "10.1.0.64/27"
     },
     "adconnectSubnetName": {
       "type": "string",
@@ -70,7 +70,7 @@
       "metadata": {
         "description": "The address range of the dmz subnet, which contains the Windows application proxy servers, mandatory if creating a new virtual network."
       },
-      "defaultValue": "10.1.0.96/24"
+      "defaultValue": "10.1.0.96/27"
     },
     "dmzSubnetName": {
       "type": "string",
@@ -84,7 +84,7 @@
       "metadata": {
         "description": "The address range of the dmz subnet, which contains the Windows application proxy servers, mandatory if creating a new virtual network."
       },
-      "defaultValue": "10.1.0.128/24"
+      "defaultValue": "10.1.0.128/27"
     },
     "addc01NicIPAddress": {
       "type": "string",
