@@ -608,7 +608,7 @@
             "value": "[concat(reference('loadBalancerDeployment').outputs.adfslbID.value,'/backendAddressPools/',variables('lbbe'))]"
           },
           "adcsBEAddressPoolID": {
-            "value": "[concat(reference('loadBalancerDeployment').outputs.adfslbID.value,'/backendAddressPools/',variables('lbbe'))]"
+            "value": "[concat(reference('loadBalancerDeployment').outputs.adcslbID.value,'/backendAddressPools/',variables('lbbe'))]"
           },
           "wapBeAddressPoolID": {
             "value": "[concat(reference('loadBalancerDeployment').outputs.waplbID.value,'/backendAddressPools/',variables('lbbe'))]"
