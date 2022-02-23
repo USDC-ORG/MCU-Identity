@@ -134,12 +134,7 @@
               "privateIPAddress": "[parameters('ipAddresses')[4]]",
               "subnet": {
                 "id": "[parameters('subnetIds')[2]]"
-              },
-              "loadBalancerBackendAddressPools": [
-                {
-                  "id": "[parameters('adcsBEAddressPoolID')]"
-                }
-              ]
+              }
             }
           }
         ]
