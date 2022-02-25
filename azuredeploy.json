@@ -216,7 +216,7 @@
       "metadata": {
         "description": "Virtual Machine name prefix for Domain Controllers"
       },
-      "defaultValue": "vm-addc"
+      "defaultValue": "vm-mcu-addc"
     },
     "adfsVmNamePrefix": {
       "type": "string",
@@ -224,7 +224,7 @@
       "metadata": {
         "description": "Virtual Machine name prefix for ADFS servers"
       },
-      "defaultValue": "vm-adfs"
+      "defaultValue": "vm-mcu-adfs"
     },
     "adcsVmNamePrefix": {
       "type": "string",
@@ -232,7 +232,7 @@
       "metadata": {
         "description": "Virtual Machine name prefix for ADCS servers"
       },
-      "defaultValue": "vm-adcs"
+      "defaultValue": "vm-mcu-adcs"
     },
     "adconnectVmNamePrefix": {
       "type": "string",
@@ -240,7 +240,7 @@
       "metadata": {
         "description": "Virtual Machine name prefix for AD Connect server"
       },
-      "defaultValue": "vm-aadc"
+      "defaultValue": "vm-mcu-aadc"
     },
     "wapVmNamePrefix": {
       "maxLength": "11",
@@ -248,7 +248,7 @@
       "metadata": {
         "description": "Virtual Machine name prefix for WAP servers"
       },
-      "defaultValue": "vm-wap"
+      "defaultValue": "vm-mcu-wap"
     },
     "sku": {
       "type": "string",
