@@ -7,7 +7,7 @@
       "metadata": {
         "description": "The name of the Virtual Network to Create, mandatory on both existing or new virtual network usage. location and -001 will be added on."
       },
-      "defaultValue": "usmc-mcu-vdvms-vnet"
+      "defaultValue": "vnet-usmc-mcu-vdvms-vnet"
     },
     "virtualNetworkAddressRange": {
       "type": "string",
@@ -168,7 +168,7 @@
       "metadata": {
         "description": "The internal LB for the two ADFS VMs. location and -001 will be added on."
       },
-      "defaultValue":"lb-adfs-dev"
+      "defaultValue":"lb-adfs-prod"
     },
     "adcsLoadBalancerPrivateIpAddress": {
       "type": "string",
@@ -182,7 +182,7 @@
       "metadata": {
         "description": "The internal LB for the two ADFS VMs. location and -001 will be added on."
       },
-      "defaultValue":"lb-adcs-dev"
+      "defaultValue":"lb-adcs-prod"
     },
     "wapLoadBalancerPrivateIpAddress": {
       "type": "string",
@@ -196,7 +196,7 @@
       "metadata": {
         "description": "The external LB for the two WAP VMs. location and -001 will be added on."
       },
-      "defaultValue":"lb-wap-dev"
+      "defaultValue":"lb-wap-prod"
     },    
     "storageAccountType": {
       "type": "string",
