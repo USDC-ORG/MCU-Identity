@@ -14,8 +14,8 @@
     },
     "resources": [
         {
-            "comments": "DMZ NSG",
-            "name": "nsg-snet-dmz",
+            "comments": "vdms NSG",
+            "name": "nsg-snet-vdms",
             "apiVersion": "2020-11-01",
             "type": "Microsoft.Network/networkSecurityGroups",
             "location": "[parameters('location')]",

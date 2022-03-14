@@ -323,7 +323,7 @@
         "properties": {
           "addressPrefix": "[parameters('vdmsSubnetAddressRange')]",
           "networkSecurityGroup": {
-            "id": "[resourceId('Microsoft.Network/networkSecurityGroups','nsg-snet-addc')]"
+            "id": "[resourceId('Microsoft.Network/networkSecurityGroups','nsg-snet-vdms')]"
           }
         }
       }
