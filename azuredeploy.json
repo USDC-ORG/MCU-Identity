@@ -390,12 +390,6 @@
           },
           "subnets": {
             "value": "[variables('subnets')]"
-          },
-          "addc01NicIPAddress": {
-            "value": "[parameters('addc01NicIPAddress')]"
-          },
-          "addc02NicIPAddress": {
-            "value": "[parameters('addc02NicIPAddress')]"
           }
         }
       }
