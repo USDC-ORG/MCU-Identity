@@ -17,9 +17,6 @@
     "adfsBeAddressPoolID": {
       "type": "string"
     },
-    "adcsBeAddressPoolID": {
-      "type": "string"
-    },
     "wapBeAddressPoolID": {
       "type": "string"
     }
@@ -81,7 +78,7 @@
               "privateIPAllocationMethod": "Static",
               "privateIPAddress": "[parameters('ipAddresses')[2]]",
               "subnet": {
-                "id": "[parameters('subnetIds')[1]]"
+                "id": "[parameters('subnetIds')[0]]"
               },
               "loadBalancerBackendAddressPools": [
                 {
@@ -107,7 +104,7 @@
               "privateIPAllocationMethod": "Static",
               "privateIPAddress": "[parameters('ipAddresses')[3]]",
               "subnet": {
-                "id": "[parameters('subnetIds')[1]]"
+                "id": "[parameters('subnetIds')[0]]"
               },
               "loadBalancerBackendAddressPools": [
                 {
@@ -133,7 +130,7 @@
               "privateIPAllocationMethod": "Static",
               "privateIPAddress": "[parameters('ipAddresses')[4]]",
               "subnet": {
-                "id": "[parameters('subnetIds')[2]]"
+                "id": "[parameters('subnetIds')[0]]"
               }
             }
           }
@@ -154,13 +151,8 @@
               "privateIPAllocationMethod": "Static",
               "privateIPAddress": "[parameters('ipAddresses')[5]]",
               "subnet": {
-                "id": "[parameters('subnetIds')[2]]"
-              },
-              "loadBalancerBackendAddressPools": [
-                {
-                  "id": "[parameters('adcsBEAddressPoolID')]"
-                }
-              ]
+                "id": "[parameters('subnetIds')[0]]"
+              }
             }
           }
         ]
@@ -180,13 +172,8 @@
               "privateIPAllocationMethod": "Static",
               "privateIPAddress": "[parameters('ipAddresses')[6]]",
               "subnet": {
-                "id": "[parameters('subnetIds')[2]]"
-              },
-              "loadBalancerBackendAddressPools": [
-                {
-                  "id": "[parameters('adcsBEAddressPoolID')]"
-                }
-              ]
+                "id": "[parameters('subnetIds')[0]]"
+              }
             }
           }
         ]
@@ -206,7 +193,7 @@
               "privateIPAllocationMethod": "Static",
               "privateIPAddress": "[parameters('ipAddresses')[7]]",
               "subnet": {
-                "id": "[parameters('subnetIds')[3]]"
+                "id": "[parameters('subnetIds')[0]]"
               }
             }
           }
@@ -227,7 +214,7 @@
               "privateIPAllocationMethod": "Static",
               "privateIPAddress": "[parameters('ipAddresses')[8]]",
               "subnet": {
-                "id": "[parameters('subnetIds')[4]]"
+                "id": "[parameters('subnetIds')[0]]"
               },
               "loadBalancerBackendAddressPools": [
                 {
@@ -253,7 +240,7 @@
               "privateIPAllocationMethod": "Static",
               "privateIPAddress": "[parameters('ipAddresses')[9]]",
               "subnet": {
-                "id": "[parameters('subnetIds')[4]]"
+                "id": "[parameters('subnetIds')[0]]"
               },
               "loadBalancerBackendAddressPools": [
                 {

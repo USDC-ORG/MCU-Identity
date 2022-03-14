@@ -310,7 +310,7 @@
   "variables": {
     //Naming convention virables
     //"virtualNetworkName": "[concat(parameters('virtualNetworkName'),'-',resourceGroup().location,'-001')]",
-    "VDMSSubnetName": "[concat(parameters('VDMSSubnetName'),'-',resourceGroup().location)]",
+    //"VDMSSubnetName": "[concat(parameters('VDMSSubnetName'),'-',resourceGroup().location)]",
     "loadBalancerNames": [
       "[concat(parameters('adfsLoadBalancer'),'-',resourceGroup().location,'-001')]",
       "[concat(parameters('wapLoadBalancer'),'-',resourceGroup().location,'-001')]"
@@ -319,7 +319,7 @@
     // Subnet array for v-net creation
     "subnets": [
       {
-        "name": "[variables('VDMSSubnetName')]",
+        "name": "[parameters('VDMSSubnetName')]",
         "properties": {
           "addressPrefix": "[parameters('vdmsSubnetAddressRange')]",
           "networkSecurityGroup": {
@@ -428,7 +428,7 @@
           },
           "subnetIds": {
             "value": [
-              "[concat(reference('virtualNetworkDeployment').outputs.vnetId.value,'/subnets/',variables('vdmsSubnetName'))]"
+              "[concat(reference('virtualNetworkDeployment').outputs.vnetId.value,'/subnets/',parameters('vdmsSubnetName'))]"
             ]
           },
           "adfsLoadBalancerPrivateIpAddress": {
@@ -488,7 +488,7 @@
           },
           "subnetIds": {
             "value": [
-              "[concat(reference('virtualNetworkDeployment').outputs.vnetId.value,'/subnets/',variables('VDMSSubnetName'))]"
+              "[concat(reference('virtualNetworkDeployment').outputs.vnetId.value,'/subnets/',parameters('VDMSSubnetName'))]"
             ]
           },
           "adfsBEAddressPoolID": {
@@ -514,7 +514,7 @@
           "location": {
             "value": "[resourceGroup().location]"
           },
-          "addcSubnetAddressRange": {
+          "vdmsSubnetAddressRange": {
             "value": "[parameters('vdmsSubnetAddressRange')]"
           }
         }

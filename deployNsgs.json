@@ -5,16 +5,7 @@
         "location": {
             "type": "string"
         },
-        "addcSubnetAddressRange": {
-            "type": "string"
-        },
-        "adfsSubnetAddressRange": {
-            "type": "string"
-        },
-        "adcsSubnetAddressRange": {
-            "type": "string"
-        },
-        "adconnectSubnetAddressRange": {
+        "vdmsSubnetAddressRange": {
             "type": "string"
         },
         "dmzSubnetAddressRange": {
@@ -22,102 +13,6 @@
         }
     },
     "resources": [
-        {
-            "comments": "ADDC NSG",
-            "name": "nsg-snet-addc",
-            "apiVersion": "2020-11-01",
-            "type": "Microsoft.Network/networkSecurityGroups",
-            "location": "[parameters('location')]",
-            "properties": {
-                "securityRules": [
-                    {
-                        "name": "AllowHTTPSFromDMZ",
-                        "properties": {
-                            "protocol": "Tcp",
-                            "sourcePortRange": "*",
-                            "destinationPortRange": "443",
-                            "sourceAddressPrefix": "[parameters('dmzSubnetAddressRange')]",
-                            "destinationAddressPrefix": "*",
-                            "access": "Allow",
-                            "priority": 200,
-                            "direction": "Inbound"
-                        }
-                    }
-                ]
-            }
-        },
-        {
-            "comments": "ADFS NSG",
-            "name": "nsg-snet-adfs",
-            "apiVersion": "2020-11-01",
-            "type": "Microsoft.Network/networkSecurityGroups",
-            "location": "[parameters('location')]",
-            "properties": {
-                "securityRules": [
-                    {
-                        "name": "AllowHTTPSFromDMZ",
-                        "properties": {
-                            "protocol": "Tcp",
-                            "sourcePortRange": "*",
-                            "destinationPortRange": "443",
-                            "sourceAddressPrefix": "[parameters('dmzSubnetAddressRange')]",
-                            "destinationAddressPrefix": "*",
-                            "access": "Allow",
-                            "priority": 200,
-                            "direction": "Inbound"
-                        }
-                    }
-                ]
-            }
-        },
-        {
-            "comments": "ADCS NSG",
-            "name": "nsg-snet-adcs",
-            "apiVersion": "2020-11-01",
-            "type": "Microsoft.Network/networkSecurityGroups",
-            "location": "[parameters('location')]",
-            "properties": {
-                "securityRules": [
-                    {
-                        "name": "AllowHTTPSFromDMZ",
-                        "properties": {
-                            "protocol": "Tcp",
-                            "sourcePortRange": "*",
-                            "destinationPortRange": "443",
-                            "sourceAddressPrefix": "[parameters('dmzSubnetAddressRange')]",
-                            "destinationAddressPrefix": "*",
-                            "access": "Allow",
-                            "priority": 200,
-                            "direction": "Inbound"
-                        }
-                    }
-                ]
-            }
-        },
-        {
-            "comments": "AD Connect NSG",
-            "name": "nsg-snet-adconnect",
-            "apiVersion": "2020-11-01",
-            "type": "Microsoft.Network/networkSecurityGroups",
-            "location": "[parameters('location')]",
-            "properties": {
-                "securityRules": [
-                    {
-                        "name": "AllowHTTPSFromDMZ",
-                        "properties": {
-                            "protocol": "Tcp",
-                            "sourcePortRange": "*",
-                            "destinationPortRange": "443",
-                            "sourceAddressPrefix": "[parameters('dmzSubnetAddressRange')]",
-                            "destinationAddressPrefix": "*",
-                            "access": "Allow",
-                            "priority": 200,
-                            "direction": "Inbound"
-                        }
-                    }
-                ]
-            }
-        },
         {
             "comments": "DMZ NSG",
             "name": "nsg-snet-dmz",
@@ -127,7 +22,7 @@
             "properties": {
                 "securityRules": [
                     {
-                        "name": "AllowHttpsFromAnywhere",
+                        "name": "AllowHttpsFrominternet",
                         "properties": {
                             "protocol": "Tcp",
                             "sourcePortRange": "*",
