@@ -20,9 +20,6 @@
     "adfsLoadBalancerPrivateIpAddress": {
       "type": "string"
     },
-    "adcsLoadBalancerPrivateIpAddress": {
-      "type": "string"
-    },
     "wapLoadBalancerPrivateIpAddress": {
       "type": "string"
     }
@@ -92,72 +89,9 @@
       }
     },
     {
-      "comments": "ADCS Load Balancer",
-      "apiVersion": "2020-11-01",
-      "name": "[parameters('loadBalancerNames')[1]]",
-      "type": "Microsoft.Network/loadBalancers",
-      "location": "[parameters('location')]",
-      "sku": {
-        "name": "Standard",
-        "tier": "Regional"
-      },
-      "properties": {
-        "frontendIPConfigurations": [
-          {
-            "name": "[parameters('lbfe')]",
-            "properties": {
-              "subnet": {
-                "id": "[parameters('subnetIds')[1]]"
-              },
-              "privateIPAddress": "[parameters('adcsLoadBalancerPrivateIpAddress')]",
-              "privateIPAllocationMethod": "Static"
-            }
-          }
-        ],
-        "backendAddressPools": [
-          {
-            "name": "[parameters('lbbe')]"
-          }
-        ],
-        "loadBalancingRules": [
-          {
-            "name": "http-443",
-            "properties": {
-              "frontendIPConfiguration": {
-                "id": "[concat(resourceid('Microsoft.Network/loadBalancers',parameters('loadBalancerNames')[1]), '/frontendIPConfigurations/',parameters('lbfe'))]"
-              },
-              "backendAddressPool": {
-                "id": "[concat(resourceid('Microsoft.Network/loadBalancers',parameters('loadBalancerNames')[1]), '/backendAddressPools/',parameters('lbbe'))]"
-              },
-              "protocol": "Tcp",
-              "frontendPort": 443,
-              "backendPort": 443,
-              "enableFloatingIP": false,
-              "idleTimeoutInMinutes": 5,
-              "probe": {
-                "id": "[concat(resourceid('Microsoft.Network/loadBalancers',parameters('loadBalancerNames')[1]), '/probes/ilbAdcsProbe')]"
-              }
-            }
-          }
-        ],
-        "probes": [
-          {
-            "name": "ilbAdcsProbe",
-            "properties": {
-              "protocol": "Http",
-              "port": 80,
-              "intervalInSeconds": 10,
-              "numberOfProbes": 2,
-              "requestPath": "/adcs/probe/"
-            }
-          }
-        ]
-      }
-    },
-    {
       "comments": "WAP Load Balancer",
       "apiVersion": "2020-11-01",
-      "name": "[parameters('loadBalancerNames')[2]]",
+      "name": "[parameters('loadBalancerNames')[1]]",
       "type": "Microsoft.Network/loadBalancers",
       "location": "[parameters('location')]",
       "sku": {
