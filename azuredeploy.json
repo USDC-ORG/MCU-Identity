@@ -382,6 +382,9 @@
           "location": {
             "value": "[resourceGroup().location]"
           },
+          "resourceGroupName": {
+            "value": "[parameters('virtualNetworkResourceGroupName')]"
+          },
           "virtualNetworkName": {
             "value": "[parameters('virtualNetworkName')]"
           },
