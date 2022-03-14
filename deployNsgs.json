@@ -7,9 +7,6 @@
         },
         "vdmsSubnetAddressRange": {
             "type": "string"
-        },
-        "dmzSubnetAddressRange": {
-            "type": "string"
         }
     },
     "resources": [

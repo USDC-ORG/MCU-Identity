@@ -334,7 +334,7 @@
     //url information for the secondary templates used in this deployment
     "baseUrl": "https://raw.githubusercontent.com/USDC-ORG/MCU-Identity/master",
     "deployStorageAccountsUrl": "[concat(variables('baseUrl'),'/deployStorageAccounts.json')]",
-    "deployVnetURL": "[concat(variables('baseUrl'),'/vnet-exsisting.json')]",
+    "deployVnetURL": "[concat(variables('baseUrl'),'/vnet-existing.json')]",
     "deployLoadBalancersUrl": "[concat(variables('baseUrl'),'/deployLoadBalancers.json')]",
     "deployNicsUrl": "[concat(variables('baseUrl'),'/deployNics.json')]",
     "deployNsgsUrl": "[concat(variables('baseUrl'),'/deployNsgs.json')]",
