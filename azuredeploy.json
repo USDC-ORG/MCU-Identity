@@ -189,7 +189,15 @@
     },
     "sku": {
       "type": "string",
-      "defaultValue": "2019-datacenter-gensecond"
+      "defaultValue": "me"
+    },
+    "publisher": {
+      "type": "string",
+      "defaultValue": "me"
+    },
+    "offer": {
+      "type": "string",
+      "defaultValue": "me"
     },
     "addcVMsSize": {
       "type": "string",
@@ -534,6 +542,12 @@
           "sku": {
             "value": "[parameters('sku')]"
           },
+          "offer": {
+            "value": "[parameters('offer')]"
+          },
+          "publisher": {
+            "value": "[parameters('publisher')]"
+          },
           "location": {
             "value": "[resourceGroup().location]"
           },
@@ -574,6 +588,12 @@
         "parameters": {
           "sku": {
             "value": "[parameters('sku')]"
+          },
+          "offer": {
+            "value": "[parameters('offer')]"
+          },
+          "publisher": {
+            "value": "[parameters('publisher')]"
           },
           "location": {
             "value": "[resourceGroup().location]"
@@ -616,6 +636,12 @@
           "sku": {
             "value": "[parameters('sku')]"
           },
+          "offer": {
+            "value": "[parameters('offer')]"
+          },
+          "publisher": {
+            "value": "[parameters('publisher')]"
+          },
           "location": {
             "value": "[resourceGroup().location]"
           },
@@ -657,6 +683,12 @@
           "sku": {
             "value": "[parameters('sku')]"
           },
+          "offer": {
+            "value": "[parameters('offer')]"
+          },
+          "publisher": {
+            "value": "[parameters('publisher')]"
+          },
           "location": {
             "value": "[resourceGroup().location]"
           },
@@ -697,6 +729,12 @@
         "parameters": {
           "sku": {
             "value": "[parameters('sku')]"
+          },
+          "offer": {
+            "value": "[parameters('offer')]"
+          },
+          "publisher": {
+            "value": "[parameters('publisher')]"
           },
           "location": {
             "value": "[resourceGroup().location]"

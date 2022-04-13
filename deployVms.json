@@ -25,6 +25,12 @@
     },
     "sku": {
       "type": "string"
+    },
+    "offer": {
+      "type": "string"
+    },
+    "publisher": {
+      "type": "string"
     }
   },
   "resources": [
@@ -51,8 +57,8 @@
         },
         "storageProfile": {
           "imageReference": {
-            "publisher": "MicrosoftWindowsServer",
-            "offer": "WindowsServer",
+            "publisher": "[parameters('publisher')]",
+            "offer": "[parameters('offer')]",
             "sku": "[parameters('sku')]",
             "version": "latest"
           },
