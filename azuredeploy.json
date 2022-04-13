@@ -187,17 +187,9 @@
       },
       "defaultValue": "vdms-wap"
     },
-    "sku": {
+    "imageId": {
       "type": "string",
-      "defaultValue": "me"
-    },
-    "publisher": {
-      "type": "string",
-      "defaultValue": "me"
-    },
-    "offer": {
-      "type": "string",
-      "defaultValue": "me"
+      "defaultValue": "/subscriptions/e917a852-3f9e-4ad9-a2c2-dc2ceee23f28/resourceGroups/rg-compute-gallery/providers/Microsoft.Compute/galleries/galleryTest/images/test1/versions/0.0.1"
     },
     "addcVMsSize": {
       "type": "string",
@@ -539,14 +531,8 @@
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
-          "sku": {
-            "value": "[parameters('sku')]"
-          },
-          "offer": {
-            "value": "[parameters('offer')]"
-          },
-          "publisher": {
-            "value": "[parameters('publisher')]"
+          "imageId": {
+            "value": "[parameters('imageId')]"
           },
           "location": {
             "value": "[resourceGroup().location]"
@@ -586,14 +572,8 @@
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
-          "sku": {
-            "value": "[parameters('sku')]"
-          },
-          "offer": {
-            "value": "[parameters('offer')]"
-          },
-          "publisher": {
-            "value": "[parameters('publisher')]"
+          "imageId": {
+            "value": "[parameters('imageId')]"
           },
           "location": {
             "value": "[resourceGroup().location]"
@@ -633,14 +613,8 @@
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
-          "sku": {
-            "value": "[parameters('sku')]"
-          },
-          "offer": {
-            "value": "[parameters('offer')]"
-          },
-          "publisher": {
-            "value": "[parameters('publisher')]"
+          "imageId": {
+            "value": "[parameters('imageId')]"
           },
           "location": {
             "value": "[resourceGroup().location]"
@@ -680,14 +654,8 @@
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
-          "sku": {
-            "value": "[parameters('sku')]"
-          },
-          "offer": {
-            "value": "[parameters('offer')]"
-          },
-          "publisher": {
-            "value": "[parameters('publisher')]"
+          "imageId": {
+            "value": "[parameters('imageId')]"
           },
           "location": {
             "value": "[resourceGroup().location]"
@@ -727,14 +695,8 @@
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
-          "sku": {
-            "value": "[parameters('sku')]"
-          },
-          "offer": {
-            "value": "[parameters('offer')]"
-          },
-          "publisher": {
-            "value": "[parameters('publisher')]"
+          "imageId": {
+            "value": "[parameters('imageId')]"
           },
           "location": {
             "value": "[resourceGroup().location]"

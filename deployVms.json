@@ -23,13 +23,7 @@
     "storageAccountNamePrefix": {
       "type": "string"
     },
-    "sku": {
-      "type": "string"
-    },
-    "offer": {
-      "type": "string"
-    },
-    "publisher": {
+    "imageId": {
       "type": "string"
     }
   },
@@ -57,10 +51,7 @@
         },
         "storageProfile": {
           "imageReference": {
-            "publisher": "[parameters('publisher')]",
-            "offer": "[parameters('offer')]",
-            "sku": "[parameters('sku')]",
-            "version": "latest"
+            "id": "[parameters('imageId')]"
           },
           "osDisk": {
             "name": "[concat('osDisk-',parameters('vmNamePrefix'),'-00',copyIndex(1))]",
