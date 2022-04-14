@@ -189,7 +189,7 @@
     },
     "imageId": {
       "type": "string",
-      "defaultValue": "/subscriptions/e917a852-3f9e-4ad9-a2c2-dc2ceee23f28/resourceGroups/rg-compute-gallery/providers/Microsoft.Compute/galleries/galleryTest/images/test1/versions/0.0.1"
+      "defaultValue": "/subscriptions/e917a852-3f9e-4ad9-a2c2-dc2ceee23f28/resourceGroups/rg-compute-gallery/providers/Microsoft.Compute/galleries/galleryTest/images/test321/versions/0.0.1"
     },
     "addcVMsSize": {
       "type": "string",
