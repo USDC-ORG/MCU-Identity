@@ -189,7 +189,7 @@
     },
     "imageId": {
       "type": "string",
-      "defaultValue": "/subscriptions/b6c05459-efd4-4bb0-a5e0-e9225e68625d/resourceGroups/mcu-rg-sharedServices-saca-eastus-001/providers/Microsoft.Compute/galleries/mcuGalStigServerSacaEastus001/images/mcu-imageDef-stigServer2019-sandbox-eastus-001/versions/0.0.1"
+      "defaultValue": "/subscriptions/b6c05459-efd4-4bb0-a5e0-e9225e68625d/resourceGroups/mcu-rg-sharedServices-saca-eastus-001/providers/Microsoft.Compute/galleries/mcuGalStigServerSacaEastus001/images/mcu-imageDef-stigServer2019-saca-eastus-001/versions/0.0.1"
     },
     "addcVMsSize": {
       "type": "string",
