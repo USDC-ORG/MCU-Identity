@@ -28,7 +28,7 @@
       "metadata": {
         "description": "The name of the internal subnet, mandatory on both virtual network usage options (new or existing). location and -001 will be added on."
       },
-      "defaultValue": "vnet-identity-eastus-001"
+      "defaultValue": "snet-identity-eastus-001"
     },
     "vdmsSubnetAddressRange": {
       "type": "string",
