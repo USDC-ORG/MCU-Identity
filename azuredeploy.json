@@ -7,14 +7,14 @@
       "metadata": {
         "description": "The name of the Virtual Network to Create, mandatory on both existing or new virtual network usage. location and -001 will be added on."
       },
-      "defaultValue": "vnet-usmc-mcu-vdvms-vnet"
+      "defaultValue": "USMC-MCU-SCCA-vNet"
     },
     "virtualNetworkResourceGroupName": {
       "type": "string",
       "metadata": {
         "description": "Specifies the name of the resource group where the existing virtual network resides. When using an existing virtual network, this becomes a mandatory parameter so the deployment can find the ID of the existing virtual network."
       },
-      "defaultValue": "n/a"
+      "defaultValue": "USMC-MCU-SCCA-Network"
     },
     "virtualNetworkAddressRange": {
       "type": "string",
@@ -28,7 +28,7 @@
       "metadata": {
         "description": "The name of the internal subnet, mandatory on both virtual network usage options (new or existing). location and -001 will be added on."
       },
-      "defaultValue": "snet-vdms-prod"
+      "defaultValue": "vnet-identity-eastus-001"
     },
     "vdmsSubnetAddressRange": {
       "type": "string",
@@ -77,7 +77,7 @@
       "metadata": {
         "description": "The internal LB for the two ADFS VMs. location and -001 will be added on."
       },
-      "defaultValue":"lb-adfs-prod"
+      "defaultValue":"lb-adfs-saca-001"
     },
     "adcs01NicIPAddress": {
       "type": "string",
@@ -126,7 +126,7 @@
       "metadata": {
         "description": "The external LB for the two WAP VMs. location and -001 will be added on."
       },
-      "defaultValue":"lb-wap-prod"
+      "defaultValue":"lb-wap-saca-001"
     },
     "adconnect01NicIPAddress": {
       "type": "string",
@@ -153,7 +153,7 @@
       "metadata": {
         "description": "Virtual Machine name prefix for Domain Controllers"
       },
-      "defaultValue": "vdms-addc"
+      "defaultValue": "vmdc"
     },
     "adfsVmNamePrefix": {
       "type": "string",
@@ -161,7 +161,7 @@
       "metadata": {
         "description": "Virtual Machine name prefix for ADFS servers"
       },
-      "defaultValue": "vdms-adfs"
+      "defaultValue": "vmadfs"
     },
     "adcsVmNamePrefix": {
       "type": "string",
@@ -169,7 +169,7 @@
       "metadata": {
         "description": "Virtual Machine name prefix for ADCS servers"
       },
-      "defaultValue": "vdms-adcs"
+      "defaultValue": "vmadcs"
     },
     "adconnectVmNamePrefix": {
       "type": "string",
@@ -177,7 +177,7 @@
       "metadata": {
         "description": "Virtual Machine name prefix for AD Connect server"
       },
-      "defaultValue": "vdms-azadc"
+      "defaultValue": "vmadc"
     },
     "wapVmNamePrefix": {
       "maxLength": "11",
@@ -185,11 +185,11 @@
       "metadata": {
         "description": "Virtual Machine name prefix for WAP servers"
       },
-      "defaultValue": "vdms-wap"
+      "defaultValue": "vmwap"
     },
     "imageId": {
       "type": "string",
-      "defaultValue": "/subscriptions/e917a852-3f9e-4ad9-a2c2-dc2ceee23f28/resourceGroups/rg-compute-gallery/providers/Microsoft.Compute/galleries/galleryTest/images/test321/versions/0.0.1"
+      "defaultValue": "/subscriptions/b6c05459-efd4-4bb0-a5e0-e9225e68625d/resourceGroups/mcu-rg-sharedServices-saca-eastus-001/providers/Microsoft.Compute/galleries/mcuGalStigServerSacaEastus001/images/mcu-imageDef-stigServer2019-sandbox-eastus-001/versions/0.0.1"
     },
     "addcVMsSize": {
       "type": "string",
@@ -315,7 +315,7 @@
       "[concat(parameters('adfsLoadBalancer'),'-',resourceGroup().location,'-001')]",
       "[concat(parameters('wapLoadBalancer'),'-',resourceGroup().location,'-001')]"
     ],
-    "storageAccountNamePrefix": "[concat('sa',uniquestring(resourceGroup().id),'001')]",
+    "storageAccountNamePrefix": "[concat('stvmstidentityeastus001')]",
     // Subnet array for v-net creation
     "subnets": [
       {
@@ -323,7 +323,7 @@
         "properties": {
           "addressPrefix": "[parameters('vdmsSubnetAddressRange')]",
           "networkSecurityGroup": {
-            "id": "[resourceId('Microsoft.Network/networkSecurityGroups','nsg-snet-vdms')]"
+            "id": "[resourceId('Microsoft.Network/networkSecurityGroups','nsg-identity-001')]"
           }
         }
       }

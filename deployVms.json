@@ -54,12 +54,12 @@
             "id": "[parameters('imageId')]"
           },
           "osDisk": {
-            "name": "[concat('osDisk-',parameters('vmNamePrefix'),'-00',copyIndex(1))]",
+            "name": "[concat('mcu-osdisk-',parameters('vmNamePrefix'),'-saca-',parameters('location'),'-00',copyIndex(1))]",
             "createOption": "FromImage"
           },
           "dataDisks": [
             {
-              "name": "[concat('dataDisk-',parameters('vmNamePrefix'),'-00',copyIndex(1))]",
+              "name": "[concat('mcu-disk-',parameters('vmNamePrefix'),'-saca-',parameters('location'),'-00',copyIndex(1))]",
               "caching": "None",
               "createOption": "empty",
               "diskSizeGB": 500,
@@ -70,7 +70,7 @@
         "networkProfile": {
           "networkInterfaces": [
             {
-              "id": "[resourceId('Microsoft.Network/networkInterfaces',concat('nic-',parameters('vmNamePrefix'),'-00',copyIndex(1)))]"
+              "id": "[resourceId('Microsoft.Network/networkInterfaces',concat('nic-01-',parameters('vmNamePrefix'),'-saca-00',copyIndex(1)))]"
             }
           ]
         },
