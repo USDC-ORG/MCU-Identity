@@ -471,16 +471,16 @@
           },
           "nicNames": {
             "value": [
-              "[concat('nic-',parameters('addcVmNamePrefix'),'-001')]",
-              "[concat('nic-',parameters('addcVmNamePrefix'),'-002')]",
-              "[concat('nic-',parameters('adfsVmNamePrefix'),'-001')]",
-              "[concat('nic-',parameters('adfsVmNamePrefix'),'-002')]",
-              "[concat('nic-',parameters('adcsVmNamePrefix'),'-001')]",
-              "[concat('nic-',parameters('adcsVmNamePrefix'),'-002')]",
-              "[concat('nic-',parameters('adcsVmNamePrefix'),'-003')]",
-              "[concat('nic-',parameters('adconnectVmNamePrefix'),'-001')]",
-              "[concat('nic-',parameters('wapVmNamePrefix'),'-001')]",
-              "[concat('nic-',parameters('wapVmNamePrefix'),'-002')]"
+              "[concat('nic-01-',parameters('addcVmNamePrefix'),'-saca-001')]",
+              "[concat('nic-01-',parameters('addcVmNamePrefix'),'-saca-002')]",
+              "[concat('nic-01-',parameters('adfsVmNamePrefix'),'-saca-001')]",
+              "[concat('nic-01-',parameters('adfsVmNamePrefix'),'-saca-002')]",
+              "[concat('nic-01-',parameters('adcsVmNamePrefix'),'-saca-001')]",
+              "[concat('nic-01-',parameters('adcsVmNamePrefix'),'-saca-002')]",
+              "[concat('nic-01-',parameters('adcsVmNamePrefix'),'-saca-003')]",
+              "[concat('nic-01-',parameters('adconnectVmNamePrefix'),'-saca-001')]",
+              "[concat('nic-01-',parameters('wapVmNamePrefix'),'-saca-001')]",
+              "[concat('nic-01-',parameters('wapVmNamePrefix'),'-saca-002')]"
             ]
           },
           "subnetIds": {
